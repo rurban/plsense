@@ -62,6 +62,8 @@ my %function_of = (status        => \&get_status,
                    explore       => \&explore_package,
                    );
 
+$0 = join(" ",('plsense-server-main',@ARGV));
+
 my ($cachedir, $port1, $port2, $port3, $loglvl, $logfile, $never_give_up);
 GetOptions ('help|h'        => sub { show_usage(); exit 0; },
             'cachedir|c=s'  => \$cachedir,

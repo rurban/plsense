@@ -42,6 +42,7 @@ my %function_of = (status    => \&get_status,
                    loglvl    => \&update_loglevel,
                    );
 
+$0 = join(" ",('plsense-server-work',@ARGV));
 my ($cachedir, $port1, $port2, $port3, $maxtasks, $loglvl, $logfile, $never_give_up);
 GetOptions ('help|h'        => sub { show_usage(); exit 0; },
             'cachedir|c=s'  => \$cachedir,

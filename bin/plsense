@@ -285,6 +285,7 @@ my %function_of = (help         => \&show_help,
                    explore      => \&explore_package,
                    );
 
+$0 = join(" ",('plsense',@ARGV));
 my ($cachedir, $port1, $port2, $port3, $maxtasks, $loglvl, $logfile);
 my $interactive = 0;
 GetOptions ('help|h'        => sub { show_usage(); exit 0; },
