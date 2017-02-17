@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/local/bin/perl5.24.1-nt
 
 use strict;
 use warnings;
@@ -10,6 +10,7 @@ use PlSense::SocketClient;
 use PlSense::ModuleKeeper;
 use PlSense::Symbol::Module;
 
+$0 = join(" ",('plsense-worker-find',@ARGV));
 my ($cachedir, $port1, $port2, $port3, $projectnm, $tasknm, $loglvl, $logfile);
 my @dirs;
 GetOptions ('cachedir=s'  => \$cachedir,

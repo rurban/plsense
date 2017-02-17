@@ -29,7 +29,8 @@ our @EXPORT = qw( logger setup_logger );
                               my $pkgnm = $m->{package};
                               $pkgnm =~ s{ ^PlSense:: }{}xms;
                               $m->{message} = sprintf("%s %-8s %-4s %-45s %s",
-                                                      $m->{time}, $m->{level}.":", $$, $pkgnm."(".$m->{line}.")", $m->{message});
+                                $m->{time}, $m->{level}.":", $$, $pkgnm."(".$m->{line}.")",
+                                $m->{message});
                           },
                       },
                 screen => { log_to => "STDERR",

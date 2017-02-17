@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/local/bin/perl5.24.1-nt
 
 use strict;
 use warnings;
@@ -19,6 +19,7 @@ use PlSense::ModuleBuilder::InheritBuilder;
 use PlSense::ModuleBuilder::DocBuilder;
 use PlSense::ModuleBuilder::PPIBuilder;
 
+$0 = join(" ",('plsense-worker-build',@ARGV));
 my ($cachedir, $port1, $port2, $port3, $projectnm, $libpath, $mdl_or_file, $recursive, $force, $loglvl, $logfile);
 GetOptions ('cachedir=s'  => \$cachedir,
             'port1=i'     => \$port1,

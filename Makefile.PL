@@ -1,4 +1,5 @@
 use strict;
+BEGIN { push @INC, '.', 'inc' }
 use inc::Module::Install;
 
 all_from 'lib/PlSense.pm';

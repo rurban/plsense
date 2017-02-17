@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/local/bin/perl5.24.1-nt
 
 use strict;
 use warnings;
@@ -37,7 +37,7 @@ my %function_of = (status    => \&get_status,
                    finfind   => \&finish_find,
                    finbuild  => \&finish_build,
                    );
-
+$0 = join(" ",('plsense-server-work',@ARGV));
 my ($cachedir, $port1, $port2, $port3, $maxtasks, $loglvl, $logfile);
 GetOptions ('help'       => sub { show_usage(); exit 0; },
             'cachedir=s' => \$cachedir,

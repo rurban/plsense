@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/local/bin/perl5.24.1-nt
 
 use strict;
 use warnings;
@@ -256,6 +256,7 @@ my %function_of = (help         => \&show_help,
                    config       => \&update_config,
                    );
 
+$0 = join(" ",('plsense',@ARGV));
 my ($cachedir, $port1, $port2, $port3, $maxtasks, $loglvl, $logfile);
 my $interactive = 0;
 GetOptions ('help'        => sub { show_usage(); exit 0; },
